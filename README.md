@@ -1,39 +1,66 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# clipboard_all_types
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+This tool get all types of data from clipboard
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+# Install
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+- Add `clipboard_all_types` to your dependencies list in `pubspec.yaml` file
 
-## Features
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  clipboard_all_types: ^0.0.1
+```
 
-## Getting started
+- Run `flutter packages get` from your root project
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- import the package by `import 'package:clipboard_all_types/clipboard_all_types.dart';`
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+final List<MemoryImage> _image = [];
+  String? text;
+
+  Future<void> onPasteCallback(ClipboardFiles files) async {
+    switch (files.type) {
+      case ClipboardType.image:
+        setState(() {
+          _image.add(MemoryImage(files.file!));
+          text = null;
+        });
+        break;
+      case ClipboardType.text:
+        setState(() {
+          text = files.text!;
+        });
+        break;
+      case ClipboardType.video:
+        setState(() {
+          text = "Video handled";
+        });
+        break;
+      case ClipboardType.audio:
+        setState(() {
+          text = "Audio handled";
+        });
+        break;
+      case ClipboardType.otherFiles:
+        setState(() {
+          text = "Other files handled";
+        });
+        break;
+      default:
+    }
+  }
+
 ```
 
-## Additional information
+## Example
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+the plugin comes with an simplest example app. run it to see it in working.
