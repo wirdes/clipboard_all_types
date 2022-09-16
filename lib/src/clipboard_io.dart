@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:clipboard_all_types/src/components/clipboard_files.dart';
 import 'package:flutter/material.dart';
 
