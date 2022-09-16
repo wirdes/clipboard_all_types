@@ -1,5 +1,5 @@
 name: clipboard_all_types
-description: This tool get all types of data from clipboard
+description: This package get all types of data from clipboard
 version: 0.0.1
 homepage: https://github.com/wirdes/clipboard_all_types
 
