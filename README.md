@@ -2,6 +2,7 @@
 
 This package get all types of data from clipboard
 
+
 # Install
 
 - Add `clipboard_all_types` to your dependencies list in `pubspec.yaml` file
@@ -11,8 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   clipboard_all_types: ^0.0.1
 ```
