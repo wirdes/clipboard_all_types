@@ -1,6 +1,6 @@
 # clipboard_all_types
 
-This tool get all types of data from clipboard
+This package get all types of data from clipboard
 
 # Install
 
