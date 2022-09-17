@@ -2,6 +2,11 @@
 
 This package get all types of data from clipboard
 
+## Platform Support
+
+| macOS | Windows | Linux | Web | Android | iOS |
+| :---: | :-----: | :---: | :-: | :-----: | :-: |
+|  ⌛   |   ⌛    |  ⌛   | ✅  |   ⌛    | ⌛  |
 
 # Install
 
