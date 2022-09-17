@@ -1,6 +1,7 @@
 # clipboard_all_types
 
 This package get all types of data from clipboard
+[![Pub Version](https://img.shields.io/pub/v/clipboard_all_types)](https://pub.dev/packages/clipboard_all_types)
 
 ## Platform Support
 
